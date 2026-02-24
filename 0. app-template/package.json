@@ -1,0 +1,13 @@
+{
+  "name": "app-template",
+  "version": "0.1.0",
+  "bin": {
+    "app-template": "bin/app-template.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  }
+}
