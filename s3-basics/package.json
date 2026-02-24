@@ -1,0 +1,13 @@
+{
+  "name": "s3-basics",
+  "version": "0.1.0",
+  "bin": {
+    "s3-basics": "bin/s3-basics.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  }
+}
