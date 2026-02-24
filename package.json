@@ -1,0 +1,28 @@
+{
+  "name": "aws-drills",
+  "version": "0.1.0",
+  "bin": {
+    "s3-basics": "bin/s3-basics.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
+  "packageManager": "npm@11.10.1",
+  "devDependencies": {
+    "@types/jest": "^30",
+    "@types/node": "^24.10.1",
+    "jest": "^30",
+    "ts-jest": "^29",
+    "aws-cdk": "2.1106.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.9.3",
+    "turbo": "^2.8.10"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.238.0",
+    "constructs": "^10.0.0"
+  }
+}
