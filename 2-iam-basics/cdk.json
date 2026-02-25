@@ -1,4 +1,4 @@
-﻿{
+{
   "app": "npx ts-node --prefer-ts-exts bin/iam-basics.ts",
   "watch": {
     "include": ["**"],

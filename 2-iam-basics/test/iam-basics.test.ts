@@ -1,4 +1,4 @@
-﻿import { test } from "@jest/globals";
+import { test } from "@jest/globals";
 // import * as cdk from 'aws-cdk-lib/core';
 // import { Template } from 'aws-cdk-lib/assertions';
 // import * as IamBasics from '../lib/iam-basics-stack';
