@@ -69,7 +69,8 @@ foreach ($file in $files) {
                            -replace "app-template", $Name
 
     if ($content -ne $newContent) {
-        Set-Content -Path $file.FullName -Value $newContent -Encoding UTF8 -NoNewline
+        $utf8NoBom = New-Object System.Text.UTF8Encoding $false
+        [System.IO.File]::WriteAllText($file.FullName, $newContent, $utf8NoBom)
     }
 }
 
