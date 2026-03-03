@@ -24,7 +24,7 @@ $PascalName = ConvertTo-PascalCase -InputString $Name
 Write-Host "Scaffolding project '$Name' (PascalCase: $PascalName)..." -ForegroundColor Cyan
 
 # 1. Determine Source and Destination
-$sourceDir = "0. app-template"
+$sourceDir = "0-app-template"
 
 if (-not (Test-Path $sourceDir)) {
     Write-Error "Template directory '$sourceDir' not found."
@@ -33,7 +33,7 @@ if (-not (Test-Path $sourceDir)) {
 
 # Find the highest number prefix
 $maxNum = 0
-Get-ChildItem -Directory | Where-Object { $_.Name -match "^(\d+)\." } | ForEach-Object {
+Get-ChildItem -Directory | Where-Object { $_.Name -match "^(\d+)\-" } | ForEach-Object {
     $currentNum = [int]$matches[1]
     if ($currentNum -gt $maxNum) {
         $maxNum = $currentNum
@@ -41,7 +41,7 @@ Get-ChildItem -Directory | Where-Object { $_.Name -match "^(\d+)\." } | ForEach-
 }
 
 $nextNum = $maxNum + 1
-$destDir = "$nextNum. $Name"
+$destDir = "$nextNum-$Name"
 
 if (Test-Path $destDir) {
     Write-Error "Destination directory '$destDir' already exists."
