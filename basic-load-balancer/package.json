@@ -1,0 +1,13 @@
+{
+  "name": "basic-load-balancer",
+  "version": "0.1.0",
+  "bin": {
+    "basic-load-balancer": "bin/basic-load-balancer.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  }
+}
